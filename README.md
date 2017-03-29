@@ -1,9 +1,11 @@
 # Shimmer-Mocap
 This is a repository that includes SHIMMER kinematics calculation, and compared with the data from mocap.
-1. Item 1
-Access to the code: main.m, run the main.m file and will get the result.
-1. Item 2
-Process of This Repository
-1. Item 3
-   1. Item 3a
-   1. Item 3b
+##Access to the code
+Run the main.m file and will get the result.
+##Process of This Repository
+* Load data from shimmer and mocap.
+* Some parameters setting.
+* Call SensorKinematics function to get kinematics information from shimmer.
+* Filter data from mocap.
+* Align the shimmer global frame to mocap frame.
+* Ploat result.
