@@ -1,9 +1,10 @@
 clear all; clc; close all;
-%% 生成mocap的动画
+%% load data
 load DataBase_KneeFlexion_mocap ankle_position_mocap knee_position_mocap thigh_position_mocap mocap_time triggerBound_mocap
 ankle_position_mocap = ankle_position_mocap(triggerBound_mocap(1):end,:)/1000;
 knee_position_mocap = knee_position_mocap(triggerBound_mocap(1):end,:)/1000;
 thigh_position_mocap = thigh_position_mocap(triggerBound_mocap(1):end,:)/1000;
+%% declare some values
 dataNum = size(ankle_position_mocap,1);
 buffSize = 1000;
 buffAnkle = [];
@@ -13,6 +14,7 @@ fHandle1 = figure(1);
 XPoints = [ankle_position_mocap(1,1),knee_position_mocap(1,1),thigh_position_mocap(1,1)];
 YPoints = [ankle_position_mocap(1,2),knee_position_mocap(1,2),thigh_position_mocap(1,2)];
 ZPoints = [ankle_position_mocap(1,3),knee_position_mocap(1,3),thigh_position_mocap(1,3)];
+%% generate animation
 segmentHandle1 = line(XPoints(1:2),YPoints(1:2),ZPoints(1:2),'color','r','LineWidth',2.5);
 segmentHandle2 = line(XPoints(2:3),YPoints(2:3),ZPoints(2:3),'color','b','LineWidth',2.5);
 pointsHandle = line(XPoints,YPoints,ZPoints,'Marker','.','MarkerSize',20,'LineStyle','none','Color','c');
