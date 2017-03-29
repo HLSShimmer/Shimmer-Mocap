@@ -13,4 +13,4 @@ Run the main.m file and will get the result.
 * Call SensorKinematics function to get kinematics information from shimmer.
 * Filter data from mocap.
 * Align the shimmer global frame to mocap frame.
-* Ploat result.
+* Plot result.
